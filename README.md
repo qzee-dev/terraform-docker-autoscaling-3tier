@@ -27,21 +27,7 @@ This project demonstrates modern DevOps practices, infrastructure as code (IaC),
 
 ## Architecture Overview
 
-This project implements a **3-tier architecture**:
 
-          Internet
-             │
-             ▼
-   Application Load Balancer (ALB)
-             │
-             ▼
- Auto Scaling Group (EC2 Docker API)
- ├── EC2 Instance → Docker container (API)
- ├── EC2 Instance → Docker container (API)
- └── EC2 Instance → Docker container (API)
-             │
-             ▼
-     RDS MySQL Database (Private Subnet)
 
 
 ### Tiers:
