@@ -26,6 +26,24 @@ This project demonstrates modern DevOps practices, infrastructure as code (IaC),
 ---
 
 ## Architecture Overview
+```mermaid
+flowchart TD
+    Internet["Internet"]
+
+    ALB["Application Load Balancer (ALB)"]
+
+    subgraph Auto_Scaling_Group["Auto Scaling Group (EC2 Docker API)"]
+        direction TB
+        EC2_1["EC2 Instance → Docker container (API)"]
+        EC2_2["EC2 Instance → Docker container (API)"]
+        EC2_3["EC2 Instance → Docker container (API)"]
+    end
+
+    RDS["RDS MySQL Database (Private Subnet)"]
+
+    Internet --> ALB --> Auto_Scaling_Group --> RDS
+```
+
 
 
 
