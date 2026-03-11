@@ -26,13 +26,14 @@ This project demonstrates modern DevOps practices, infrastructure as code (IaC),
 ---
 
 ## Architecture Overview
+
 ```mermaid
 flowchart TD
     Internet["Internet"]
 
     ALB["Application Load Balancer (ALB)"]
 
-    subgraph Auto_Scaling_Group["Auto Scaling Group (EC2 Docker API)"]
+    subgraph Auto_Scaling_Group["Auto Scaling Group (2–6 EC2 instances)"]
         direction TB
         EC2_1["EC2 Instance → Docker container (API)"]
         EC2_2["EC2 Instance → Docker container (API)"]
@@ -43,11 +44,6 @@ flowchart TD
 
     Internet --> ALB --> Auto_Scaling_Group --> RDS
 ```
-
-
-
-
-
 ### Tiers:
 
 1. **Presentation Layer:** ALB handles client traffic and distributes it to EC2 instances.  
