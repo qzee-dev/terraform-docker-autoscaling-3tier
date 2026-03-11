@@ -1,0 +1,7 @@
+terraform-aws-docker-api-rds/
+│
+├── provider.tf
+├── variables.tf
+├── main.tf
+├── outputs.tf
+└── terraform.tfvars
